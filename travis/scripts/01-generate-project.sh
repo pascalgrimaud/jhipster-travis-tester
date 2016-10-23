@@ -18,8 +18,16 @@ if [ "$JHIPSTER" == "app-gateway-uaa" ]; then
 fi
 
 mkdir -p "$HOME"/app
-mv -f "$JHIPSTER_SAMPLES"/"$JHIPSTER"/.yo-rc.json "$HOME"/app/
+cp $TRAVIS_BUILD_DIR/app/.yo-rc.json $HOME/app/
+cp $TRAVIS_BUILD_DIR/app/*.jh $HOME/app/
+cp $TRAVIS_BUILD_DIR/app/*.jdl $HOME/app/
+cp -R $TRAVIS_BUILD_DIR/app/.jhipster/ $HOME/app/
+
 cd "$HOME"/app
 npm link generator-jhipster
 yo jhipster --force --no-insight
+
+for f in `ls .jhipster` do yo jhipster:entity ${f%.*} --force ; done
+for f in `ls *.jh *.jdl` do yo jhipster:import-jdl ${f%.*} --force ; done
+
 ls -al "$HOME"/app
