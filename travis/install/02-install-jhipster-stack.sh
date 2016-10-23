@@ -22,6 +22,5 @@ if [ "$JHIPSTER_BRANCH" == "latest" ]; then
 elif [ "$JHIPSTER_BRANCH" != "master" ]; then
     git checkout -b $JHIPSTER_BRANCH $JHIPSTER_BRANCH
 fi
-git log --oneline -n 5
 npm install
 npm link
