@@ -26,7 +26,7 @@ before_install:
     - sh -e /etc/init.d/xvfb start
 install:
     - $TRAVIS_BUILD_DIR/app/config.sh
-    # - $JHIPSTER_INSTALL/02-install-jhipster-stack.sh
+    - $JHIPSTER_INSTALL/02-install-jhipster-stack.sh
     # - $JHIPSTER_INSTALL/03-checkVersion.sh
     # - $JHIPSTER_INSTALL/04-cache.sh
 script:
