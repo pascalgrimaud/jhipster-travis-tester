@@ -21,11 +21,11 @@ env:
         - JHIPSTER_SAMPLES=$TRAVIS_BUILD_DIR/app
         - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
 before_install:
+    - . $TRAVIS_BUILD_DIR/app/config.sh
     - sudo /etc/init.d/postgresql stop
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
 install:
-    - $TRAVIS_BUILD_DIR/app/config.sh
     - $JHIPSTER_INSTALL/02-install-jhipster-stack.sh
     # - $JHIPSTER_INSTALL/03-checkVersion.sh
     # - $JHIPSTER_INSTALL/04-cache.sh
