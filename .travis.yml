@@ -29,6 +29,6 @@ install:
     - $JHIPSTER_INSTALL/02-install-jhipster-stack.sh
     - $JHIPSTER_INSTALL/03-checkVersion.sh
     - $JHIPSTER_INSTALL/04-cache.sh
+    - $JHIPSTER_INSTALL/05-copy-project.sh
 script:
-    - $JHIPSTER_SCRIPTS/01-generate-project.sh
     - $TRAVIS_BUILD_DIR/app/test.sh

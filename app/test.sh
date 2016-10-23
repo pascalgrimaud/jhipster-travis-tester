@@ -17,7 +17,7 @@ ls -al "$HOME"/app/
 ./mvnw clean
 ./mvnw test
 gulp test
-gulp eslint
+gulp eslint --no-notification
 docker-compose -f src/main/docker/mysql.yml up -d
 sleep 20
 ./mvnw clean package -Pprod -DskipTests
