@@ -27,15 +27,10 @@ before_install:
     - sh -e /etc/init.d/xvfb start
 install:
     - $JHIPSTER_INSTALL/02-install-jhipster-stack.sh
-    # - $JHIPSTER_INSTALL/03-checkVersion.sh
-    # - $JHIPSTER_INSTALL/04-cache.sh
+    - $JHIPSTER_INSTALL/03-checkVersion.sh
+    - $JHIPSTER_INSTALL/04-cache.sh
 script:
-    - echo $JHIPSTER_REPO
-    - echo $JHIPSTER_BRANCH
-    - echo $JHIPSTER_NODE_CACHE
-    - echo $PROFILE
-    - echo $RUN_APP
-    - echo $PROTRACTOR
+    - echo "test"
     # - $JHIPSTER_SCRIPTS/01-generate-project.sh
     # - $JHIPSTER_SCRIPTS/02-generate-entities.sh
     # - $JHIPSTER_SCRIPTS/03-docker-compose.sh
