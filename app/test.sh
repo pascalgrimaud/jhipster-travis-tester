@@ -4,6 +4,7 @@ set -ev
 # generate project
 cd "$HOME"/app
 npm link generator-jhipster
+cat .yo-rc.json
 yo jhipster --force --no-insight
 
 # generate entities
