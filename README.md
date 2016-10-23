@@ -4,11 +4,11 @@
 
 Travis build for pull requests: [jhipster-travis-tester/pull_requests](https://travis-ci.org/pascalgrimaud/jhipster-travis-tester/pull_requests)
 
-# Introduction
+## Introduction
 
 This project is used to test with Travis a JHipster project.
 
-# How to use
+## How to use
 
 Simply change the `app/` folder by:
 - editing the `app/.yo-rc.json` file
