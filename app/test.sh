@@ -7,8 +7,8 @@ npm link generator-jhipster
 yo jhipster --force --no-insight
 
 # generate entities
-for f in `ls .jhipster` do yo jhipster:entity ${f%.*} --force ; done
-for f in `ls *.jh *.jdl` do yo jhipster:import-jdl ${f%.*} --force ; done
+for f in `ls .jhipster` ; do yo jhipster:entity ${f%.*} --force ; done
+for f in `ls *.jh *.jdl` ; do yo jhipster:import-jdl ${f%} --force ; done
 
 ls -al "$HOME"/app/
 
