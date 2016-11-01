@@ -7,9 +7,14 @@ set -ev
 npm install -g npm
 
 #-------------------------------------------------------------------------------
+# Install yarn
+#-------------------------------------------------------------------------------
+npm install -g yarn
+
+#-------------------------------------------------------------------------------
 # Install yeoman, bower and gulp
 #-------------------------------------------------------------------------------
-npm install -g yo bower gulp-cli
+yarn global add yo bower gulp-cli
 
 #-------------------------------------------------------------------------------
 # Install JHipster
@@ -22,5 +27,5 @@ if [ "$JHIPSTER_BRANCH" == "latest" ]; then
 elif [ "$JHIPSTER_BRANCH" != "master" ]; then
     git checkout -b $JHIPSTER_BRANCH $JHIPSTER_BRANCH
 fi
-npm install
-npm link
+yarn install
+yarn link
