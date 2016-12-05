@@ -22,7 +22,10 @@ env:
         - JHIPSTER_SAMPLES=$TRAVIS_BUILD_DIR/app
         - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
 before_install:
+    - jdk_switcher use oraclejdk8
+    - java -version
     - . $TRAVIS_BUILD_DIR/app/config.sh
+    - sudo /etc/init.d/mysql stop
     - sudo /etc/init.d/postgresql stop
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
