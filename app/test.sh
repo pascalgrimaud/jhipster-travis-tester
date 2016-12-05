@@ -3,7 +3,7 @@ set -ev
 
 # generate project
 cd "$HOME"/app
-npm link generator-jhipster
+yarn link generator-jhipster
 cat .yo-rc.json
 yo jhipster --force --no-insight
 
