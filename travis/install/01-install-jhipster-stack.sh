@@ -14,3 +14,5 @@ elif [ "$JHIPSTER_BRANCH" != "master" ]; then
 fi
 yarn install
 yarn link
+# npm install
+# npm link
