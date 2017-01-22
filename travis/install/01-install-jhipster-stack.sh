@@ -12,6 +12,7 @@ if [ "$JHIPSTER_BRANCH" == "latest" ]; then
 elif [ "$JHIPSTER_BRANCH" != "master" ]; then
     git checkout -b $JHIPSTER_BRANCH $JHIPSTER_BRANCH
 fi
+git --no-pager log -n 10 --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 yarn install
 yarn link
 # npm install
