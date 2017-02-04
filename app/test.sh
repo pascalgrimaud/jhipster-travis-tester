@@ -26,17 +26,4 @@ ls -al "$HOME"/app/
 ################################################################################
 # launch tests
 ################################################################################
-docker-compose -f src/main/docker/mysql.yml up -d
-
-./mvnw clean test
-
-gulp test
-
-gulp eslint --no-notification
-
-./mvnw clean package -Pprod -DskipTests
-docker ps -a
-
-java -jar target/*.war --spring.output.ansi.enabled=ALWAYS &
-sleep 60
-curl -v http://localhost:8080
+echo 'hello!'
