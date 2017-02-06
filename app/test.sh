@@ -37,7 +37,9 @@ gulp test
 ./mvnw -Pprod clean package -DskipTests
 docker ps -a
 
-java -jar target/*.war --spring.output.ansi.enabled=ALWAYS &
+# java -jar target/*.war --spring.output.ansi.enabled=ALWAYS &
+cd target
+./ceptecafe-0.0.1-SNAPSHOT.war &
 sleep 60
 curl -v http://localhost:8080
 gulp itest
