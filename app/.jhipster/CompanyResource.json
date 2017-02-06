@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "company",
+            "otherEntityName": "company",
+            "otherEntityRelationshipName": "companyResource"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "beacon",
+            "otherEntityName": "beacon",
+            "otherEntityRelationshipName": "companyResource"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "menu",
+            "otherEntityName": "menu",
+            "otherEntityRelationshipName": "companyResource"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "slogan",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": 3,
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "photo",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        }
+    ],
+    "changelogDate": "20170205202809",
+    "entityTableName": "company_resource",
+    "dto": "no",
+    "pagination": "pager",
+    "service": "serviceClass"
+}

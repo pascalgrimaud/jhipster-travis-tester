@@ -1,30 +1,36 @@
 {
   "generator-jhipster": {
-    "baseName": "jhipster",
-    "packageName": "com.mycompany.myapp",
-    "packageFolder": "com/mycompany/myapp",
+    "jhipsterVersion": "4.0.1",
+    "baseName": "ceptecafe",
+    "packageName": "com.ceptecafe",
+    "packageFolder": "com/ceptecafe",
     "serverPort": "8080",
-    "authenticationType": "session",
-    "hibernateCache": "ehcache",
+    "authenticationType": "jwt",
+    "hibernateCache": "no",
     "clusteredHttpSession": false,
     "websocket": false,
     "databaseType": "sql",
-    "devDatabaseType": "h2Disk",
-    "prodDatabaseType": "mysql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
     "searchEngine": false,
     "messageBroker": false,
     "buildTool": "maven",
     "enableSocialSignIn": false,
-    "rememberMeKey": "5db087e022c8ae3d7ccf467ef01d63fb6eab2a0a",
+    "jwtSecretKey": "438bbdb14edc12a0a5edc66d23770cafd1bbf9f5",
     "useSass": false,
+    "clientPackageManager": "yarn",
     "applicationType": "monolith",
+    "clientFramework": "angular1",
     "testFrameworks": [
-      "gatling"
+      "gatling",
+      "cucumber",
+      "protractor"
     ],
     "jhiPrefix": "jhi",
     "enableTranslation": true,
-    "nativeLanguage": "en",
+    "nativeLanguage": "tr",
     "languages": [
+      "tr",
       "en"
     ]
   }
