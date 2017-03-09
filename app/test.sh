@@ -19,7 +19,7 @@ yo jhipster --force --no-insight
 ################################################################################
 # for f in `ls .jhipster` ; do yo jhipster:entity ${f%.*} --force ; done
 # for f in `ls *.jh *.jdl` ; do yo jhipster:import-jdl ${f%} --force ; done
-yo jhipster:import-jdl jhipster.jdl
+yo jhipster:import-jdl jhipster.jdl --force
 
 # display app folder
 ls -al "$HOME"/app/
