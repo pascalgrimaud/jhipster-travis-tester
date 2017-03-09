@@ -9,5 +9,5 @@ entity Zone {
 }
 
 relationship OneToMany {
-  Zone to Country{zone(name) required}
+  Zone to Country{zone(name)}
 }
