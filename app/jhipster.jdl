@@ -1,0 +1,13 @@
+entity Country {
+	id Long, 
+	name String required
+}
+
+entity Zone {
+	id Long, 
+	name String required 
+}
+
+relationship OneToMany {
+  Zone to Country{zone(name) required}
+}
