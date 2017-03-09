@@ -19,9 +19,11 @@ yo jhipster --force --no-insight
 ################################################################################
 # for f in `ls .jhipster` ; do yo jhipster:entity ${f%.*} --force ; done
 # for f in `ls *.jh *.jdl` ; do yo jhipster:import-jdl ${f%} --force ; done
+yo jhipster:import-jdl jhipster.jdl
 
 # display app folder
 ls -al "$HOME"/app/
+ls -al "$HOME"/app/.jhipster/
 
 ################################################################################
 # launch tests
@@ -29,14 +31,3 @@ ls -al "$HOME"/app/
 docker-compose -f src/main/docker/mysql.yml up -d
 
 ./mvnw clean test
-
-gulp test
-
-gulp eslint --no-notification
-
-./mvnw clean package -Pprod -DskipTests
-docker ps -a
-
-java -jar target/*.war --spring.output.ansi.enabled=ALWAYS &
-sleep 60
-curl -v http://localhost:8080
